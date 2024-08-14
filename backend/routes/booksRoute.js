@@ -4,10 +4,6 @@ import {Books} from '../models/bookModel.js'
 
 const router = express.Router();
 
-
- //lesson 05
-    //create a new book document
-
     router.post('/', async (req, res) => {
         try{
             if(!req.body.booksname || !req.body.author || !req.body.publishYear){
@@ -28,10 +24,6 @@ const router = express.Router();
         }
 
         })
-
-        //lesson 06
-    //get all books with mongoose
-
     router.get('/', async (req, res) => {
         try {
             const books = await Books.find();
@@ -46,9 +38,6 @@ const router = express.Router();
             res.status(500).send({message: error.message});
         }
         });
-
-        //lesson 07
-        //get a one book by id with mongoose
      router.get('/:id', async (req, res) => {
             try {
 
@@ -61,8 +50,7 @@ const router = express.Router();
                 res.status(500).send({message: error.message});
             }
             });
-
-            ///lesson 08
+   
             //update a book by id with mongoose
 
     router.put('/:id', async (req, res) => {
@@ -86,8 +74,6 @@ const router = express.Router();
                     }
                 });
 
-
-            //lesson 09
             //delete a book with mongoose
 
         router.delete('/:id', async (req, res) => {
