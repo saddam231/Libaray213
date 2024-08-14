@@ -9,10 +9,6 @@ const app = express();
 
 app.use(express.json());
 
-
-
-
-//lesson 02
 //create our first Http Route
 
 app.get('/', (req, res) => {
@@ -32,7 +28,6 @@ app.use(cors());
 //   })
 //  )
    
-//lesson 03
 //connect to the server and mongoose in database
 app.use('/books', booksRoute);
 
